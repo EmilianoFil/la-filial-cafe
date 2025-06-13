@@ -1,3 +1,6 @@
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 // Import the functions from Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js";
@@ -5,13 +8,13 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebas
 
 // Configuración del proyecto Firebase
 export const firebaseConfig = {
-  apiKey: "AIzaSyC-c_OMJBiPuCfh3bct7cpgSB9LernugRA",
-  authDomain: "corcega-loyalty-club.firebaseapp.com",
-  projectId: "corcega-loyalty-club",
-  storageBucket: "corcega-loyalty-club.firebasestorage.app",
-  messagingSenderId: "789184958568",
-  appId: "1:789184958568:web:4990bf50335bec365f2bdd",
-  measurementId: "G-NXMC00DZ81"
+  apiKey: "AIzaSyD82F6v4pqs9EoGAdgl2NZ-mjO5PrU6j6A",
+  authDomain: "la-filial-cafe.firebaseapp.com",
+  projectId: "la-filial-cafe",
+  storageBucket: "la-filial-cafe.firebasestorage.app",
+  messagingSenderId: "83503296572",
+  appId: "1:83503296572:web:540e0c166960ddbda49339",
+  measurementId: "G-YWFNNTXB8F"
 };
 
 // Si querés seguir usando app y db desde este archivo, podés exportarlos también:
