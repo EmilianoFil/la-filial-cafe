@@ -20,11 +20,11 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('img/wallpaper.png');
+  background-color: #725237;
   background-repeat: repeat;
   background-size: 600px;
   background-position: center;
-  opacity: 0.75;
+  opacity: 1;
   z-index: -1;
   pointer-events: none;
 }
@@ -34,7 +34,7 @@ body::before {
   max-width: 480px;
   margin: 40px auto;
   padding: 20px 20px;
-  background: #01323f;
+  background: #725237;
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -200,7 +200,7 @@ section {
 
 /* Tarjeta de fidelidad */
 .tarjeta-fidelidad {
-  background: #ed7053;
+  background: #725237;
   width: 90% !important;
   color: #01323f;
   padding: 20px 20px !important;
@@ -247,14 +247,14 @@ section {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #01323f;
+  color: #725237;
 }
 
 .tarjeta-fidelidad #faltan {
   font-size: 16px;
   font-weight: normal;
   margin-bottom: 20px;
-  color: #01323f;
+  color: #725237;
 }
 
 /* Instagram */
