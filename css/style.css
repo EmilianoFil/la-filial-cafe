@@ -92,8 +92,8 @@ button, .btn-primary {
   font-family: 'Syncopate', serif;
   font-size: 12px;
   margin: 12.5px auto;
-  background-color: #ed7053;
-  color: white;
+      background-color: #fbf0d3;
+      color: #725237;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -273,8 +273,8 @@ footer a[href*="instagram.com"]::before {
 #mensaje-error .boton {
   margin-top: 20px;
   display: inline-block;
-  background-color: #ed7053;
-  color: white;
+      background-color: #fbf0d3;
+      color: #725237;
   font-weight: bold;
   text-decoration: none;
   padding: 10px 20px;
