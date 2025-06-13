@@ -202,7 +202,7 @@ section {
 .tarjeta-fidelidad {
   background: #725237;
   width: 90% !important;
-  color: #01323f;
+  color: #fbf0d3;
   padding: 20px 20px !important;
   border-radius: 16px;
   max-width: 400px;
@@ -233,12 +233,12 @@ section {
 }
 
 .tarjeta-fidelidad .circle.lleno {
-  background-image: url("img/Corcega_Logo_Blanco.png");
+  background-image: url("img/la_filial_logo.png");
   opacity: 1;
 }
 
 .tarjeta-fidelidad .circle.noveno {
-  background-image: url("img/Corcega_Logo_Original.png");
+  background-image: url("img/la_filial_logo.png");
   opacity: 1;
 }
 
