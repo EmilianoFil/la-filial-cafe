@@ -30,7 +30,7 @@
 </head>
 <body>
   <div id="loader">
-    <img src="css/img/Corcega_Logo_Original.png" alt="Cargando..." class="galope">
+    <img src="css/img/la_filial_logo2.png" alt="Cargando..." class="galope">
   </div>
 
   <div class="menu-style" id="contenedor" style="display:none;">
@@ -42,12 +42,12 @@
       <h1>
         <span style="font-size: 37px; display:block; margin-top: 6px; font-family: 'Syncopate', sans-serif;">UN CAFECITO</span>
       </h1>
-      <p id="faltan" style="color: #01323f; font-family: 'Playfair Display', serif; text-transform: uppercase; font-size: 17px; display: block; margin-top: 6px;"></p>
+      <p id="faltan" style="color: #725237; font-family: 'Playfair Display', serif; text-transform: uppercase; font-size: 17px; display: block; margin-top: 6px;"></p>
     </div>
     <div id="grid" class="grid"></div>
     <div id="mensaje-error" style="display:none;">
-      <div style="padding: 30px 20px; background: #01323f; border-radius: 12px; font-size: 18px; color: white; text-align: center;">
-        <p id="mensaje-no-registrado" style="white-space: pre-line; margin: 20px 0; color: #008ba4;"></p>
+      <div style="padding: 30px 20px; background: #725237; border-radius: 12px; font-size: 18px; color: white; text-align: center;">
+        <p id="mensaje-no-registrado" style="white-space: pre-line; margin: 20px 0; color: #fbf0d3;"></p>
         <div style="display: flex; justify-content: center;">
           <a href="" id="boton-registrar" class="btn-primary" style="min-width: 220px; text-decoration: none;">Registrarlo</a>
         </div>
@@ -56,7 +56,7 @@
     <footer id="footer" style="margin-top: 30px;">
       <p id="footer-text" style="font-family: 'Playfair Display', serif; text-transform: uppercase; font-size: 17px; display: block; margin-top: 6px;">
         Seguinos en Instagram<br>
-        <a id="footer-link" href="https://www.instagram.com/corcegacafe" target="_blank" style="text-transform: lowercase; text-decoration: none;">@corcegacafe</a>
+        <a id="footer-link" href="https://www.instagram.com/lafilialcafe" target="_blank" style="text-transform: lowercase; text-decoration: none;">@lafilialcafe</a>
       </p>
     </footer>
   </div>
@@ -91,7 +91,7 @@
 
         // Set colors for error state
         document.querySelector("#info-header span").style.color = "white";
-        document.getElementById("faltan").style.color = "#008ba4";
+        document.getElementById("faltan").style.color = "#fbf0d3";
         document.getElementById("cliente").style.color = "white";
         document.getElementById("footer-text").style.color = "white";
         document.getElementById("footer-link").style.color = "white";
@@ -111,11 +111,11 @@
 
       contenedor.classList.add("tarjeta-fidelidad");
 
-      document.querySelector("#info-header span").style.color = "#01323f";
-      document.getElementById("faltan").style.color = "#01323f";
-      document.getElementById("cliente").style.color = "#01323f";
-      document.getElementById("footer-text").style.color = "#01323f";
-      document.getElementById("footer-link").style.color = "#01323f";
+      document.querySelector("#info-header span").style.color = "#725237";
+      document.getElementById("faltan").style.color = "#725237";
+      document.getElementById("cliente").style.color = "#725237";
+      document.getElementById("footer-text").style.color = "#725237";
+      document.getElementById("footer-link").style.color = "#725237";
 
       const data = snap.data();
 
@@ -169,7 +169,7 @@
           cafesRestantes--;
           selloCumpleUsado = true;
         } else if (selloInstaActivo && !selloInstaUsado) {
-          div.style.backgroundImage = "url('css/img/Corcega_Logo_Original_Insta.png')";
+          div.style.backgroundImage = "url('css/img/la_filial_logo.png')";
           div.style.opacity = "1";
           div.classList.add("glow");
           cafesRestantes--;
@@ -180,7 +180,7 @@
         } else if (i === 9) {
           div.classList.add("noveno");
         } else {
-          div.style.backgroundImage = "url('css/img/Corcega_Logo_Tiza.png')";
+          div.style.backgroundImage = "url('css/img/la_filial_logo.png')";
         }
 
         grid.appendChild(div);
