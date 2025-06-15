@@ -107,8 +107,8 @@ button, .btn-primary {
   padding: 8px 16px;
   font-size: 14px;
   background: white;
-  color: #d86634;
-  border: 2px solid #ed7053;
+  color: #725237;
+  border: 2px solid #725237;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
@@ -119,14 +119,14 @@ button, .btn-primary {
 .mensaje {
   margin-top: 20px;
   font-weight: bold;
-  color: #008ba4;
+  color: #fbf0d3;
   white-space: pre-line;
 }
 
 .mensaje.error,
 .mensaje.ok,
 .mensaje a {
-  color: #008ba4;
+  color: #fbf0d3;
 }
 
 .mensaje a {
@@ -315,7 +315,7 @@ footer a[href*="instagram.com"]::before {
 /* Botón blanco en tarjeta de fidelidad */
 .tarjeta-fidelidad .volver-card {
   background-color: white;
-  color: #ed7053;
+  color: #725237;
   font-weight: bold;
   border: none;
   padding: 12px 20px;
@@ -327,7 +327,7 @@ footer a[href*="instagram.com"]::before {
 
 .btn-estadisticas {
   background-color: white;
-  color: #ed7053;
+  color: #725237;
   padding: 10px 12px;
   border-radius: 8px;
   text-decoration: none;
