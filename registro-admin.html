@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXMC00DZ81"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXMsssC00DZ81"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-NXMC00DZ81');
+    gtag('config', 'G-NXMC0sss0DZ81');
   </script>
 </head>
 <body>
@@ -65,7 +65,7 @@
     </form>
 
   <div id="loader" style="display: none; margin-top: 20px; text-align: center; width: 100%;">
-    <img src="css/img/Corcega_Logo_Naranja.png" class="galope" style="width: 95px; display: inline-block;">
+    <img src="css/img/la_filial_logo2.png" class="galope" style="width: 95px; display: inline-block;">
   </div>
     <div class="mensaje" id="mensaje"></div>
   </div>
@@ -145,12 +145,12 @@
           detalles: `DNI: ${dni} - ${nombre}`,
           timestamp: serverTimestamp()
         });
-        // Enviar mail de bienvenida (la función filtrará el DNI internamente)
-        fetch("https://us-central1-corcega-loyalty-club.cloudfunctions.net/enviarMailRegistro", {
+        /*// Enviar mail de bienvenida (la función filtrará el DNI internamente)
+        fetch("https://us-central1-lafiliail.cloudfunctions.net/enviarMailRegistro", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ dni, nombre, mail: email })
-        });
+        });*/
       }
 
       loader.style.display = "none";
@@ -162,7 +162,7 @@
           ${sumarCafecito ? "☕ Y ya se sumó un cafecito." : ""}
         </div>
         <div style="margin-top: 16px;">
-          <a href="admin.html" style="background: white; color: #d86634; font-weight: bold; padding: 10px 20px; border-radius: 8px; text-decoration: none;">Volver al panel</a>
+          <a href="admin.html" style="background: white; color: #725237; font-weight: bold; padding: 10px 20px; border-radius: 8px; text-decoration: none;">Volver al panel</a>
         </div>
       `;
       form.reset();
