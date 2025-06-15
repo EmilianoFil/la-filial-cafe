@@ -13,7 +13,7 @@ const db = admin.firestore();
 const emailUser = defineSecret("EMAIL_USER");
 const emailPass = defineSecret("EMAIL_PASS");
 
-exports.enviarMailRegistro = onRequest(
+exports.enviarMailRegistroLaFilial = onRequest(
   { region: "us-central1", secrets: [emailUser, emailPass] },
   (req, res) => {
     corsHandler(req, res, async () => {
@@ -33,33 +33,33 @@ exports.enviarMailRegistro = onRequest(
       });
 
       const mailOptions = {
-        from: `Córcega Café <${emailUser.value()}>`,
+        from: `La Filial Café <${emailUser.value()}>`,
         to: email,
         subject: "¡Bienvenido/a al Club de Recompensas!",
         html: `
           <div style="font-family:sans-serif; max-width:500px; margin:auto; text-align:center; color:#2b2b2b;">
-            <h2>¡Bienvenido/a al Club de Cafecitos de Córcega! ☕</h2>
+            <h2>¡Bienvenido/a al Club de Cafecitos de La Filial! ☕</h2>
             <p>Hola <strong>${nombre}</strong>, ya estás registrado con el DNI <strong>${dni}</strong>.</p>
             <p>Esta es tu tarjeta, hay que empezar a llenarla:</p>
-            <img src="https://emilianofil.github.io/corcegacafe/css/img/tarjeta-vacia.png" alt="Tarjeta de cafecitos" style="max-width:100%; margin:20px 0; border-radius:16px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <img src="https://emilianofil.github.io/la-filial-cafe/css/img/tarjeta-vacia.png" alt="Tarjeta de cafecitos" style="max-width:100%; margin:20px 0; border-radius:16px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
 
             <div style="margin-bottom: 30px;">
               <div style="margin-bottom: 12px;">
-                <img src="https://emilianofil.github.io/corcegacafe/css/img/logo-corcega-color.png" alt="Logo Córcega" style="display: block; margin: 0 auto; max-width: 120px;">
+                <img src="https://emilianofil.github.io/la-filial-cafe/css/img/la_filial_logo2.png" alt="Logo La Filial Cafe" style="display: block; margin: 0 auto; max-width: 120px;">
               </div>
               <div>
-                <a href="https://emilianofil.github.io/corcegacafe/estado.html?dni=${dni}" style="display:inline-block; padding:12px 24px; background-color:#d86634; color:white; text-decoration:none; font-weight:bold; border-radius:8px;">
+                <a href="https://emilianofil.github.io/la-filial-cafe/estado.html?dni=${dni}" style="display:inline-block; padding:12px 24px; background-color:#d86634; color:white; text-decoration:none; font-weight:bold; border-radius:8px;">
                   Ver mi tarjeta
                 </a>
               </div>
             </div>
 
-            <p style="margin-top:30px;">Nos vemos pronto en la isla 🏝️.</p>
+            <p style="margin-top:30px;">Nos vemos pronto.</p>
             <hr style="margin:30px auto; max-width:80%; border:none; border-top:1px solid #ccc;" />
             <p style="margin: 0;">Seguinos en Instagram</p>
-            <a href="https://www.instagram.com/corcegacafe" target="_blank" style="display:inline-flex; align-items:center; color:#d86634; font-weight:bold; text-decoration:none; margin-top:5px;">
+            <a href="https://www.instagram.com/lafilialcafe" target="_blank" style="display:inline-flex; align-items:center; color:#d86634; font-weight:bold; text-decoration:none; margin-top:5px;">
               <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="20" height="20" style="margin-right:8px;">
-              @corcegacafe
+              @lafilialcafe
             </a>
           </div>
         `,
@@ -84,7 +84,7 @@ exports.enviarMailRegistro = onRequest(
   }
 );
 
-exports.enviarMailFelicitaciones = onRequest(
+exports.enviarMailFelicitacionesLaFilial = onRequest(
   { region: "us-central1", secrets: [emailUser, emailPass] },
   (req, res) => {
     corsHandler(req, res, async () => {
@@ -104,7 +104,7 @@ exports.enviarMailFelicitaciones = onRequest(
       });
 
       const mailOptions = {
-        from: `Córcega Café <${emailUser.value()}>`,
+        from: `La Filial Café <${emailUser.value()}>`,
         to: email,
         subject: "¡Felicitaciones, juntaste todos los sellos! 🎉",
         html: `
@@ -112,16 +112,16 @@ exports.enviarMailFelicitaciones = onRequest(
             <h2>¡Felicitaciones, ${nombre}! 🎉</h2>
             <p>Completaste tu tarjeta de cafecitos con el DNI <strong>${dni}</strong>.</p>
             <p>Así se ve ahora tu tarjeta:</p>
-            <img src="https://emilianofil.github.io/corcegacafe/css/img/tarjeta-llena.png" alt="Tarjeta completa" style="max-width:100%; margin:20px 0; border-radius:16px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
-            <a href="https://emilianofil.github.io/corcegacafe/estado.html?dni=${dni}" style="display:inline-block; padding:12px 24px; background-color:#d86634; color:white; text-decoration:none; font-weight:bold; border-radius:8px;">
+            <img src="https://emilianofil.github.io/la-filial-cafe/css/img/tarjeta-llena.png" alt="Tarjeta completa" style="max-width:100%; margin:20px 0; border-radius:16px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <a href="https://emilianofil.github.io/la-filial-cafe/estado.html?dni=${dni}" style="display:inline-block; padding:12px 24px; background-color:#d86634; color:white; text-decoration:none; font-weight:bold; border-radius:8px;">
               Ver mi estado
             </a>
-            <p style="margin-top:30px;">Pasá a buscar tu cafecito por la isla 🏝️.</p>
+            <p style="margin-top:30px;">Pasá a buscar tu cafecito.</p>
             <hr style="margin:30px auto; max-width:80%; border:none; border-top:1px solid #ccc;" />
             <p style="margin: 0;">Seguinos en Instagram</p>
-            <a href="https://www.instagram.com/corcegacafe" target="_blank" style="display:inline-flex; align-items:center; color:#d86634; font-weight:bold; text-decoration:none; margin-top:5px;">
+            <a href="https://www.instagram.com/lafilialcafe" target="_blank" style="display:inline-flex; align-items:center; color:#d86634; font-weight:bold; text-decoration:none; margin-top:5px;">
               <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="20" height="20" style="margin-right:8px;">
-              @corcegacafe
+              @lafilialcafe
             </a>
           </div>
         `,
@@ -145,7 +145,7 @@ exports.enviarMailFelicitaciones = onRequest(
   }
 );
 
-exports.selloCumpleaniosDiario = onSchedule(
+exports.selloCumpleaniosDiarioLaFilial = onSchedule(
   {
     schedule: "0 8 * * *", // todos los días a las 8:00
     timeZone: "America/Argentina/Buenos_Aires",
@@ -189,7 +189,7 @@ exports.selloCumpleaniosDiario = onSchedule(
         });
 
         const mailOptions = {
-          from: `Córcega Café <${emailUser.value()}>`,
+          from: `La Filial Café <${emailUser.value()}>`,
           to: email,
           subject: "¡Feliz cumpleaños! 🎂 Te regalamos un sello",
           html: `
@@ -200,10 +200,10 @@ exports.selloCumpleaniosDiario = onSchedule(
 
   <div style="margin-bottom: 30px;">
     <div style="margin-bottom: 12px;">
-      <img src="https://emilianofil.github.io/corcegacafe/css/img/sello_cumpleanos.png" alt="Sello de cumpleaños" style="max-width:140px; margin:0 auto 16px; border-radius:50%; box-shadow:0 2px 10px rgba(0,0,0,0.1); display:block;">
+      <img src="https://emilianofil.github.io/la-filial-cafe/css/img/sello_cumpleanos.png" alt="Sello de cumpleaños" style="max-width:140px; margin:0 auto 16px; border-radius:50%; box-shadow:0 2px 10px rgba(0,0,0,0.1); display:block;">
     </div>
     <div>
-      <a href="https://emilianofil.github.io/corcegacafe/estado.html?dni=${dni}" style="display:inline-block; padding:12px 24px; background-color:#d86634; color:white; text-decoration:none; font-weight:bold; border-radius:8px;">
+      <a href="https://emilianofil.github.io/la-filial-cafe/estado.html?dni=${dni}" style="display:inline-block; padding:12px 24px; background-color:#d86634; color:white; text-decoration:none; font-weight:bold; border-radius:8px;">
         Ver mi tarjeta
       </a>
     </div>
@@ -212,9 +212,9 @@ exports.selloCumpleaniosDiario = onSchedule(
   <p style="margin-top:30px;">Te esperamos para festejarlo como se debe 🐎.</p>
   <hr style="margin:30px auto; max-width:80%; border:none; border-top:1px solid #ccc;" />
   <p style="margin: 0;">Seguinos en Instagram</p>
-  <a href="https://www.instagram.com/corcegacafe" target="_blank" style="display:inline-flex; align-items:center; color:#d86634; font-weight:bold; text-decoration:none; margin-top:5px;">
+  <a href="https://www.instagram.com/lafilialcafe" target="_blank" style="display:inline-flex; align-items:center; color:#d86634; font-weight:bold; text-decoration:none; margin-top:5px;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="20" height="20" style="margin-right:8px;">
-    @corcegacafe
+    @lafilialcafe
   </a>
 </div>
           `,

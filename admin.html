@@ -28,7 +28,7 @@
       cursor: pointer;
       display: inline-block;
       padding: 10px 16px;
-      background-color: #d86634;
+      background-color: #725237;
       color: white;
       border-radius: 6px;
       font-weight: bold;
@@ -56,12 +56,12 @@
     }
     .menu-links li a {
       text-decoration: none;
-      color: #d86634;
+      color: #725237;
       font-weight: bold;
     }
     .btn-estadisticas {
       background-color: white;
-      color: #d86634;
+      color: #725237;
       padding: 10px 12px;
       border-radius: 8px;
       text-decoration: none;
@@ -85,7 +85,7 @@
       margin-bottom: 20px;
     }
     #sesion-expirada a {
-      background-color: #d86634;
+      background-color: #725237;
       color: white;
       padding: 10px 20px;
       border-radius: 8px;
@@ -96,7 +96,7 @@
       margin-top: 20px;
       padding: 20px;
       background: #fff7f0;
-      border: 2px dashed #d86634;
+      border: 2px dashed #725237;
       border-radius: 12px;
       position: relative;
     }
@@ -180,11 +180,11 @@
 
 .message-container {
   margin-top: 20px;
-  background: #01323f;
+  background: #725237;
   border-radius: 12px;
   padding: 30px 20px;
   text-align: center;
-  color: #008ba4;
+  color: #fbf0d3;
   font-size: 18px;
 }
 
@@ -290,7 +290,7 @@
       <button id="btnInstagram" style="display:none;" class="btn-estadisticas">📸 Sigue Instagram</button>
     </div>
   <div id="loader" style="display: none; margin-top: 20px; text-align: center; width: 100%;">
-    <img src="css/img/Corcega_Logo_Naranja.png" class="galope" style="width: 95px; display: inline-block;">
+    <img src="css/img/la_filial_logo.png" class="galope" style="width: 95px; display: inline-block;">
   </div>
     <div id="respuesta" class="mensaje"></div>
     <button id="btnDeshacer" style="display:none;" class="btn-estadisticas">↩️ Deshacer operación</button>
@@ -464,13 +464,13 @@
     await updateDoc(ref, updates);
 
     // Enviar mail de felicitaciones SOLO cuando updates.cafes === 8
-    if (updates.cafes === 8) {
+    /*if (updates.cafes === 8) {
       fetch("https://us-central1-corcega-loyalty-club.cloudfunctions.net/enviarMailFelicitaciones", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ dni, nombre, mail: data.email || data.mail || "" })
       });
-    }
+    }*/
 
     // Guardamos para deshacer
     const btnDeshacer = document.getElementById("btnDeshacer");
